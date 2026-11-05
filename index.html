@@ -31,8 +31,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IM+Fell+English:ital@0;1&family=Italianno&family=Gulzar&family=Vazirmatn:wght@300;400;500&display=swap" rel="stylesheet">
-<!-- IranNastaliq (OFL-1.1, fonts/IranNastaliq-OFL.txt), self-hosted: the Farsi main text -->
-<link rel="preload" href="fonts/IranNastaliq.woff2" as="font" type="font/woff2" crossorigin>
 <script>
 /* ?static freezes every animation (rsvp.js sets it too). ?frame=<0..1> is for design checks only: it pauses
    every loop at f*28 s of the scenes' shared 28 s loop (the streetcar loop = two 14 s Simurgh cycles; html.sg-frame + cp-frame, --sg-t, --cp-t) and wins over ?static. */
@@ -48,8 +46,6 @@
 })();
 </script>
 <style>
-/* Full Persian/Arabic coverage on purpose (not subset to the page's letters): household greetings come from the Sheet */
-@font-face{font-family:"IranNastaliq";src:url("fonts/IranNastaliq.woff2") format("woff2");font-display:swap}
 :root{
   color-scheme: light;
   --page:#f6eedb;
@@ -69,8 +65,7 @@
   --en:"IM Fell English", "Cormorant Garamond", Georgia, serif;
   --en-ui:"Cormorant Garamond", "EB Garamond", Georgia, serif; /* buttons, kickers, code box: need real weights */
   --en-names:"Italianno", "IM Fell English", cursive;
-  --fa-cal:"Gulzar", "Amiri", serif; /* the Hafez couplet and the couple's names */
-  --fa-text:"IranNastaliq", "Gulzar", "Amiri", serif; /* Farsi main text: greeting, invitation line, details, headings */
+  --fa-cal:"Gulzar", "Amiri", serif; /* Farsi invitation text and names */
   --fa:"Vazirmatn", Tahoma, sans-serif;
   --naskh:"Amiri", "Times New Roman", serif;
   --nastaliq:"Gulzar", "Amiri", serif;
@@ -121,14 +116,12 @@ p,h2,h3{text-wrap:balance}
 
 /* ---------- Text ---------- */
 .fa{font-family:var(--fa);direction:rtl}
-/* IranNastaliq lines are wide: balance the wraps on narrow phones so no single word is left alone */
-.greet-fa,.invite-fa,.d-fa,.thanks .t-fa{text-wrap:balance}
 .center{text-align:center}
 .lede{margin:40px auto 0;max-width:500px;text-align:center}
 .greet{
   margin:0;font-style:italic;font-weight:400;font-size:25px;line-height:1.3;color:var(--ink);
 }
-.greet-fa{margin:4px 0 0;font-family:var(--fa-text);font-size:29px;line-height:1.95;color:var(--ink)}
+.greet-fa{margin:4px 0 0;font-family:var(--fa-cal);font-size:24px;line-height:2.1;color:var(--ink)}
 .invite{margin:22px 0 0;font-style:italic;font-size:20.5px;line-height:1.5;color:var(--ink)}
 /* the Hafez couplet that opens the invitation text */
 .verse{margin:26px auto 0;max-width:460px}
@@ -141,7 +134,7 @@ p,h2,h3{text-wrap:balance}
 .verse + .invite{margin-top:26px}
 /* until rsvp.js has personalised the page (or when there is no invitation) the greeting stays hidden */
 .greet[hidden] + .greet-fa[hidden] + .invite{margin-top:0}
-.invite-fa{margin:10px 0 0;font-family:var(--fa-text);font-size:25px;line-height:1.95;color:var(--ink-2)}
+.invite-fa{margin:10px 0 0;font-family:var(--fa-cal);font-size:21px;line-height:2.2;color:var(--ink-2)}
 
 .names{margin:34px 0 0;text-align:center}
 .names-en{margin:0;font-family:var(--en-names);font-weight:400;font-size:clamp(56px,16vw,76px);line-height:1.05;letter-spacing:0;color:var(--lapis)}
@@ -160,7 +153,7 @@ p,h2,h3{text-wrap:balance}
 .kicker{display:block;font-family:var(--en-ui);font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);font-weight:600;margin-bottom:6px}
 .d-en{margin:0;font-style:italic;font-size:21px;line-height:1.35;font-weight:400}
 .d-en.sm{font-size:18px;font-weight:400;color:var(--ink-2)}
-.d-fa{margin:4px 0 0;font-family:var(--fa-text);font-size:24px;line-height:1.9;color:var(--ink-2)}
+.d-fa{margin:4px 0 0;font-family:var(--fa-cal);font-size:20px;line-height:2.05;color:var(--ink-2)}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
 .btn-link{
   display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:0;
@@ -181,7 +174,7 @@ p,h2,h3{text-wrap:balance}
 .rsvp{margin:12px auto 0;max-width:540px}
 .rsvp-head{text-align:center}
 .rsvp-head h2{margin:0;font-family:var(--en-ui);font-weight:500;font-size:30px;letter-spacing:.32em;padding-left:.32em;color:var(--lapis)}
-.rsvp-head .h-fa{margin:0;font-family:var(--fa-text);font-size:30px;line-height:1.9;color:var(--lapis)}
+.rsvp-head .h-fa{margin:0;font-family:var(--fa-cal);font-size:25px;line-height:2;color:var(--lapis)}
 .deadline{margin:8px 0 0;font-style:italic;font-size:17px;color:var(--ink-2)}
 .deadline-fa{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.8}
 
@@ -259,7 +252,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--lapis);outlin
 .thanks:focus-visible{outline:2px solid var(--verm)}
 .thanks .t-med{display:block;width:40px;height:40px;margin:0 auto}
 .thanks h3{margin:12px 0 0;font-style:italic;font-weight:400;font-size:25px;line-height:1.3;color:var(--lapis)}
-.thanks .t-fa{margin:6px 0 0;font-family:var(--fa-text);font-size:26px;line-height:1.9;color:var(--lapis)}
+.thanks .t-fa{margin:6px 0 0;font-family:var(--fa-cal);font-size:22px;line-height:2.05;color:var(--lapis)}
 .thanks .upd{margin:22px auto 0;max-width:400px;font-style:italic;font-size:17.5px;color:var(--ink-2)}
 .thanks .upd-fa{margin:4px auto 0;max-width:400px;font-size:14.5px;color:var(--ink-2);line-height:1.85}
 /* the saved-reply summary rsvp.js adds under the thank-you line */
