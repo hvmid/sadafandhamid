@@ -1,7 +1,7 @@
-/* Paste the Google Apps Script web app URL (ends in /exec) here after deploying. See SETUP.md, step B6.
- * Until it is set, the page runs in demo mode on sample data and saves nothing. */
+/* The Google Apps Script web app (deployed from the "Wedding RSVP" Sheet, version v1). See SETUP.md, section A.
+ * Add ?demo to the page URL to try the form on sample data without saving anything. */
 window.RSVP_CONFIG = {
-  apiUrl: 'PASTE_WEB_APP_URL_HERE',
+  apiUrl: 'https://script.google.com/macros/s/AKfycbx1b-rDDid1uE4jPMgYm4k7FKb8b8qL3lKZuxkOSUq-zHrE23QQFLZAw8Fi8vPdFawGZg/exec',
   // Replies AND changes close at the end of December 15, 2026, Toronto time. Keep in sync with Code.gs.
   deadline: '2026-12-15T23:59:59-05:00',
 };
