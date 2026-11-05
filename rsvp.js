@@ -18,9 +18,9 @@
   var params = new URLSearchParams(location.search);
   if (params.has('static')) document.documentElement.classList.add('static');
   var DEMO = params.has('demo') || !CFG.apiUrl || /PASTE/i.test(CFG.apiUrl);
-  var DEADLINE = new Date(CFG.deadline || '2027-01-10T23:59:59-05:00');
-  var DEADLINE_EN = 'January 10';
-  var DEADLINE_FA = '۲۰ دی';
+  var DEADLINE = new Date(CFG.deadline || '2026-12-15T23:59:59-05:00');
+  var DEADLINE_EN = 'December 15';
+  var DEADLINE_FA = '۲۴ آذر';
 
   var $ = function (id) { return document.getElementById(id); };
   var faDigits = function (n) { return String(n).replace(/\d/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'[d]; }); };
