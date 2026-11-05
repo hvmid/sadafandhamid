@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//sadafandhamid.ca//Wedding invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-20270130@sadafandhamid.ca
+DTSTAMP:20261104T120000Z
+DTSTART:20270130T230000Z
+DTEND:20270131T033000Z
+SUMMARY:Sadaf & Hamid · Wedding
+LOCATION:Trapezi Private Dining\, 88 Ossington Ave\, Second Floor\, Toronto
+ \, ON M6J 2Z4
+DESCRIPTION:Greek dinner · fully halal · alcohol-free\nThree courses\, fo
+ llowed by tea and cake\nhttps://sadafandhamid.ca/
+URL:https://sadafandhamid.ca/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
